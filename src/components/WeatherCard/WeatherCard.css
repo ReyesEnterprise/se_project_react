@@ -1,0 +1,23 @@
+.weatherCard {
+  position: relative;
+  display: flex;
+  height: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.weatherCard__temp {
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 16px;
+}
+
+.weatherCard__img {
+  object-fit: cover;
+  object-position: right top;
+  width: 100%;
+}
