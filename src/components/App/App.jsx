@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import { coordinates, APIKey } from "../../utils/constants";
+import {
+  coordinates,
+  APIKey,
+  defaultClothingItems,
+} from "../../utils/constants";
 import { filterWeatherData, getWeather } from "../../utils/weatherApi";
 
 import "./App.css";
@@ -20,6 +24,7 @@ function App() {
 
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
+  const [clothingItems, setClothingItems] = useState(defaultClothingItems);
 
   //  arrow function to handle ...
 
@@ -41,8 +46,8 @@ function App() {
   useEffect(() => {
     getWeather(coordinates, APIKey)
       .then((data) => {
-        const filterdata = filterWeatherData(data);
-        setWeatherData(filterdata);
+        const filterData = filterWeatherData(data);
+        setWeatherData(filterData);
       })
       .catch(console.error);
   }, []);
@@ -52,13 +57,18 @@ function App() {
     <div className="page">
       <div className="page__content">
         <Header handleAddClick={handleAddClick} weatherData={weatherData} />
-        <Main weatherData={weatherData} handleCardClick={handleCardClick} />
+        <Main
+          weatherData={weatherData}
+          handleCardClick={handleCardClick}
+          clothingItems={clothingItems}
+        />
       </div>
       <ModalWithForm
         title="New garment"
         buttonText="Add garment"
         activeModal={activeModal}
         onClose={closeActiveModal}
+        name="add-garment"
       >
         <label htmlFor="name" className="modal__label">
           Name
@@ -87,6 +97,7 @@ function App() {
               name="weather"
               className="modal__radio-input"
               id="hot"
+              value="hot"
             />
           </label>
           <label
@@ -99,6 +110,7 @@ function App() {
               name="weather"
               className="modal__radio-input"
               id="warm"
+              value="warm"
             />
           </label>
           <label
@@ -111,6 +123,7 @@ function App() {
               name="weather"
               className="modal__radio-input"
               id="cold"
+              value="cold"
             />
           </label>
         </fieldset>
@@ -119,6 +132,7 @@ function App() {
         activeModal={activeModal}
         card={selectedCard}
         onClose={closeActiveModal}
+        name="preview"
       />
       <Footer />
     </div>
