@@ -34,15 +34,15 @@ WTWR (What to Wear) is a React application that helps users decide what to wear 
 
 ### Main Interface
 
-![Main Page](./Screenshot%202026-06-20%20at%2012.04.07%E2%80%AFPM.png)
+![Main Page](./src/assets/Main%20Interface%20sreen%20grab.png)
 
 ### Add Garment Modal
 
-![Add Garment](./Screenshot%202026-06-20%20at%2012.04.53%E2%80%AFPM.png)
+![Add Garment](./src/assets/Add%20Garment%20Modal%20screen%20grab.png)
 
 ### Item Preview Modal
 
-![Item Preview](./Screenshot%202026-06-20%20at%2012.04.40%E2%80%AFPM.png)
+![Item Preview](./src/assets/Item%20Preview%20Modal%20screen%20grab.png)
 
 ---
 
