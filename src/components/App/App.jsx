@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   coordinates,
-  APIKey,
+  apiKey,
   defaultClothingItems,
 } from "../../utils/constants";
 import { filterWeatherData, getWeather } from "../../utils/weatherApi";
@@ -44,10 +44,10 @@ function App() {
   //  useEffect
 
   useEffect(() => {
-    getWeather(coordinates, APIKey)
+    getWeather(coordinates, apiKey)
       .then((data) => {
-        const filterData = filterWeatherData(data);
-        setWeatherData(filterData);
+        const filteredData = filterWeatherData(data);
+        setWeatherData(filteredData);
       })
       .catch(console.error);
   }, []);
