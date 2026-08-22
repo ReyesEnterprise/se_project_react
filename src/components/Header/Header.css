@@ -19,7 +19,14 @@
   border: none;
   font-family: "CabinetGrotesk", sans-serif;
   font-weight: 700;
+  cursor: pointer;
 }
+
+.header__nav-link {
+  color: #000;
+  text-decoration: none;
+}
+
 .header__user-container {
   display: flex;
   align-items: center;

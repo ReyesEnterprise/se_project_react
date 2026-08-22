@@ -1,0 +1,27 @@
+.clothes-section__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  gap: 21px;
+}
+
+.clothes-secetion__row {
+  display: flex;
+}
+
+.clothes-section__text {
+  color: black;
+  font-weight: 700;
+  line-height: 25px;
+  font-size: 20px;
+}
+
+.clothes-section__button {
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: #00000099;
+  cursor: pointer;
+}

@@ -1,0 +1,21 @@
+import "./SideBar.css";
+import avatar from "../../assets/avatar.svg";
+
+function SideBar() {
+  return (
+    <div>
+      <aside className="sidebar">
+        <div className="sidebar__profile">
+          <p className="sidebar__username">Terrence Tegegne</p>
+          <img
+            src={avatar}
+            alt="Terrence Tegegne"
+            className="sidebar__avatar"
+          />
+        </div>
+      </aside>
+    </div>
+  );
+}
+
+export default SideBar;
