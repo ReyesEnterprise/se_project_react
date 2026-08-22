@@ -63,7 +63,7 @@ function App() {
   const onAddItem = (data, resetForm) => {
     addItem(data)
       .then((data) => {
-        setClothingItems([data, ...clothingItems]);
+        setClothingItems((prev) => [data, ...prev]);
         if (typeof resetForm === "function") resetForm();
         closeActiveModal();
       })

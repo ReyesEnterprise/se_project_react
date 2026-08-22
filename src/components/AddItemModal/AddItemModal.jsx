@@ -26,6 +26,7 @@ function AddItemModal({ activeModal, onClose, onAddItem }) {
       <label htmlFor="name" className="modal__label">
         Name
         <input
+          required
           type="text"
           className="modal__input"
           id="name"
@@ -38,6 +39,7 @@ function AddItemModal({ activeModal, onClose, onAddItem }) {
       <label htmlFor="imageUrl" className="modal__label">
         Image
         <input
+          required
           type="url"
           className="modal__input"
           id="imageUrl"
@@ -52,6 +54,7 @@ function AddItemModal({ activeModal, onClose, onAddItem }) {
         <label htmlFor="hot" className="modal__label modal__label_type_radio">
           Hot
           <input
+            required
             type="radio"
             name="weather"
             checked={values.weather === "hot"}
@@ -64,6 +67,7 @@ function AddItemModal({ activeModal, onClose, onAddItem }) {
         <label htmlFor="warm" className="modal__label modal__label_type_radio">
           Warm
           <input
+            required
             type="radio"
             name="weather"
             checked={values.weather === "warm"}
@@ -76,6 +80,7 @@ function AddItemModal({ activeModal, onClose, onAddItem }) {
         <label htmlFor="cold" className="modal__label modal__label_type_radio">
           Cold
           <input
+            required
             type="radio"
             name="weather"
             checked={values.weather === "cold"}

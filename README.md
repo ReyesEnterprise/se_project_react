@@ -46,7 +46,7 @@ WTWR (What to Wear) is a React application that helps users decide what to wear 
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Live Demo Project 10 only
 
 https://reyesenterprise.github.io/se_project_react/
 
